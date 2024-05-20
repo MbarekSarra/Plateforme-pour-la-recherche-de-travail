@@ -1,0 +1,57 @@
+.image {
+    
+    width: 700px; 
+    padding:20px;
+    height: 200px; 
+    left: 80%;
+    
+}
+
+.homecontent
+{
+        position: absolute;
+        top: 30%;
+        left: 80%;
+        transform: translate(-50%,-50%);
+}
+.homeecontent
+{
+    position: fixed;
+    top: 520px; /* ajustez selon vos besoins */
+    left: 75%;
+    transform: translateX(-50%);
+    z-index: 1; /* pour que les boutons soient au-dessus de l'image */
+    display: flex; /* Utiliser Flexbox pour aligner les boutons horizontalement */
+}
+.hoocontent 
+{
+    position: fixed;
+    top: 520px; /* ajustez selon vos besoins */
+    left: 87%;
+    color: #4e3fa7;
+    transform: translateX(-50%);
+    z-index: 1; /* pour que les boutons soient au-dessus de l'image */
+    display: flex; /* Utiliser Flexbox pour aligner les boutons horizontalement */
+}
+
+.homecontent h1
+{
+    color: #220aaa;
+    font-size: 50px;
+}
+.homecontent a
+{
+    margin-top: 10px;
+}
+
+@media screen and (max-width:600px)
+{
+    .home image
+{
+    height: 700px;
+}
+    .homecontent h1
+{
+    font-size: 40px;        
+}
+}

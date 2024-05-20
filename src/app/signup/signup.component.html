@@ -1,0 +1,94 @@
+
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image" style="background-image: url('assets/image/signup1.png');"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                            </div>
+                            <form class="user"  [formGroup]="myForm"  (ngSubmit)="saveUser()" >
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" required formControlName="firstname" class="form-control form-control-user" 
+                                        id="exampleFirstName"
+    
+                                         placeholder="First Name">
+                                         <div *ngIf="firstname.touched && firstname.invalid">
+                                            <small class="text-danger" *ngIf="firstname.errors?.['required']">firstname is required</small>
+                                            <small class="text-danger" *ngIf="firstname.errors?.['minLength']">firstname is to short</small>
+                                            <small class="text-danger" *ngIf="firstname.errors?.['maxLength']">firstname is to long</small>
+                                            <small class="text-danger" *ngIf="firstname.errors?.['pattern']">firstname is should contain alphabetique</small>
+    
+                                         </div>
+    
+                                            
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" formControlName="lastname" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="Last Name">
+                                            <div *ngIf="lastname.touched && lastname.invalid">
+                                                <small class="text-danger" *ngIf="lastname.errors?.['required']">lastname is required</small>
+                                            <small class="text-danger" *ngIf="lastname.errors?.['minLength']">lastname is to short</small>
+                                            <small class="text-danger" *ngIf="lastname.errors?.['maxLength']">lastname is to long</small>
+                                            <small class="text-danger" *ngIf="lastname.errors?.['pattern']">lastname is should contain alphabetique</small>
+    
+    
+                                            </div>
+    
+                                            
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" formControlName="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Email Address">
+                                        <div *ngIf="email.touched && email.invalid">
+                                            <small class="text-danger" *ngIf="email.errors?.['required']">Email is required</small>
+                                            <small class="text-danger" *ngIf="email.errors?.['email']">Email is invalid</small>
+                                        </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" formControlName="pasword" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="Password">
+                                            <div *ngIf="pasword.touched && pasword.invalid">
+                                                <small class="text-danger" *ngIf="pasword.errors?.['required']">pasword is required</small>
+                                                <small class="text-danger" *ngIf="pasword.errors?.['minlength']">pasword must be 6 characters at least</small>
+                                            </div>
+                                            
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="password" formControlName="repeatPassword" class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                            <div *ngIf="repeatPassword.touched && repeatPassword.invalid">
+                                                <small class="text-danger" *ngIf="repeatPassword.errors?.['required']">repeatPassword is required</small>
+                                                <small class="text-danger" *ngIf="repeatPassword.errors?.['minlength']">repeatPassword must be 6 characters at least</small>
+                                            </div>
+                                    </div>
+                                </div>  
+                                <button  class="btn btn-primary btn-user btn-block" type="submit" >Register Account</button>
+                               
+                            </form>
+                            
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" routerLink="/resetpassword">Forgot Password?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" routerLink="/login">Already have an account? Login!</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" routerLink="/">page principale !</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>

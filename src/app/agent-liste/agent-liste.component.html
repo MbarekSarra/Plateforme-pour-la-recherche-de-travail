@@ -1,0 +1,35 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Agents</h1>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Tout Agents</h6>
+    </div>
+    <div class="card-body">
+        <div class="agent-container">
+            <div *ngFor="let item1 of listagent" class="agent-item">
+                <div class="agent-card">
+                    <div class="agent-info">
+                        <p><strong>Fullname:</strong> {{ item1.fullname }}</p>
+                        <p><strong>Email:</strong> {{ item1.email }}</p>
+                        <p><strong>City:</strong> {{ item1.city }}</p>
+                        <p><strong>Phone:</strong> {{ item1.phone }}</p>
+                        <p><strong>Job:</strong> {{ item1.job }}</p>
+                    </div>
+                    <div class="agent-actions">
+                        <button mat-mini-fab color="warn" (click)="openDialog(item1.$key)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-mini-fab color="green" (click)="edit(item1.$key)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-mini-fab color="accent" (click)="openChat(item1.email)">
+                            <mat-icon>chat</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

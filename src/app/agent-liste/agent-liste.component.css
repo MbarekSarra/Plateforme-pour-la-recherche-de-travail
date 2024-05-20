@@ -1,0 +1,32 @@
+.agent-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.agent-item {
+    flex: 0 0 calc(33.33% - 20px); /* Permet d'afficher 3 agents par ligne */
+    max-width: calc(33.33% - 20px); /* Permet d'afficher 3 agents par ligne */
+}
+
+.agent-card {
+    background-color: #aee1f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.agent-info p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.agent-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.agent-actions button {
+    margin-left: 10px;
+}
